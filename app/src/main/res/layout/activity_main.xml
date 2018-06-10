@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- view for AdMob Interstitial Ad -->
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admob Ads Example"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+        <!--
+            <TextView
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_level"
+                android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+        <Button
+            android:id="@+id/interstitial_image_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Interstitial Ad" />
+
+        <Button
+            android:id="@+id/interstitial_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rewarded Video Ad" />
+
+        <Button
+            android:id="@+id/banner_top_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banner Top Ad" />
+
+        <Button
+            android:id="@+id/banner_bottom_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banner Bottom Ad" />
+
+        <Button
+            android:id="@+id/large_banner_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Large Banner 320x100 Ad" />
+
+        <Button
+            android:id="@+id/medium_banner_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium Rectangle 300x250 Ad" />
+
+        <Button
+            android:id="@+id/full_size_banner_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full-Size Banner 468x60 Ad" />
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/large_banner_ad_unit">
+
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
